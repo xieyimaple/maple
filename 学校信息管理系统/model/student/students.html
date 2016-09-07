@@ -1,0 +1,165 @@
+<style type="text/css">
+	th{background:#ddd;}
+</style>
+<script type="text/javascript">
+$(function(){
+	//加载数据
+	loadStudentData();
+	//为复选框绑定事件
+	$(".opt_btns>:checkbox").off()
+	$(".opt_btns>:checkbox").change(function(){
+		if($(this).prop("checked")){
+			//被选中
+			$("#stuTbl :checkbox:visible").prop("checked",true);
+		}else{
+			$("#stuTbl :checkbox:visible").prop("checked",false);
+		}
+	});
+	//为添加按钮绑定事件
+	$(".opt_btns button").off();
+	$(".opt_btns button").click(function(){
+		var opt = $(this).text();
+		switch(opt){
+			case "添加":
+				$(".tab_content").load("model/student/addStudent.html");
+			break;
+			case "刷新":
+				loadStudentData();
+			break;
+			case "修改":
+				var id = $("#stuTbl :checkbox:checked").map(function(index,item){
+					return item.value;
+				}).get(0);
+				if(id){
+					//1查询学生的信息
+					var stu;
+					$.ajax("model/student/student.json",{
+						dataType:"json",
+						async:false,
+						success: function(data){
+							stu = data;
+						}
+					});
+					console.log(stu);
+					//2加载修改学生信息页面
+					var url = "model/student/updStudent.html?time="+new Date().getTime();
+					$(".tab_content").load(url,function(){
+						//3初始化修改学生信息的页面
+						console.log("准备初始化");
+						$(":text[name='name']").val(stu.name);
+						$(":input:hidden[name='id']").val(stu.id);
+					});					
+					
+				}else{
+					alert("请选择您要修改的学生的信息");
+				}
+			break;
+			case "删除":
+				var ids = $("#stuTbl :checkbox:checked").map(function(index,item){
+					return item.value;
+				}).get().join();
+				/*
+				$.post("",{ids:ids},function(){
+					alert("删除成功");
+					loadStudentData();
+				});
+				*/
+				$.ajax("http://172.16.8.185:8080/sms/delStudents",{
+					dataType:"jsonp",
+					jsonp:"jsonp",
+					jsonpCallback:"delHandler",
+					data:{ids:ids}
+				});
+			break;
+			//
+		}
+	});
+	
+	//为选择按钮绑定事件
+	$(".search :submit").off("click");
+	$(".search :submit").on("click",function(){
+		var key = $("select[name='search_key']").val();//name
+		var val = $(":text[name='search_val']").val();//terry  {key:terry}
+		var obj = new Object();
+		obj[key] = val;//{key:val}
+		loadStudentData(obj);
+	});
+});
+
+//加载学生数据
+function loadStudentData(data){
+	data = data || {};
+	var url = "model/student/students.js"
+	$.ajax(url,{
+		dataType:"jsonp",
+		jsonp:"jsonp",
+		jsonpCallback:"loadData",
+		data:data
+		
+	});
+	//每次加载数据之后把全选框的勾取消掉
+	$(".opt_btns :checkbox").prop("checked",false);
+}
+
+//将获取到的数据插入到tbody当中.
+function loadData(data){
+	var hTr = $(".hiddenTr");
+	//清空tbody中的内容
+	$("tbody").children(":gt(0)").remove();
+	data.forEach(function(item){
+		var newTr = hTr.clone().removeClass("hiddenTr");
+		newTr.find(":checkbox").val(item.id);
+		newTr.children().eq(1).text(item.name);
+		newTr.children().eq(2).text(item.clazzName);
+		newTr.children().eq(3).text(item.gender);
+		newTr.children().eq(4).text(item.grade);
+		
+		$("tbody").append(newTr);
+	});
+}
+
+function delHandler(data){
+	alert(data);
+}
+</script>
+<!--学生管理-->
+			<div class="inner">
+				<div class="search">
+					<select name="search_key">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input name="search_val" type="text">
+					<input type="submit" value="search">
+				</div>
+				<table id="stuTbl">
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>姓名</th>
+							<th>班级</th>
+							<th>性别</th>
+							<th>分数</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="hiddenTr">
+							<td>
+				<input type="checkbox" >
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+                    <button>刷新</button>
+				</div>
+			</div>

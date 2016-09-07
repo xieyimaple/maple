@@ -1,0 +1,78 @@
+<style type="text/css">
+    	h2{ text-align:center; padding-top:50px;}
+		table{ margin:0 auto; border:1px solid #333; border-collapse:collapse; width:400px;}
+		table td{ border:1px solid #333; text-align:center; height:30px;}
+		input{ height:30px;}
+		.btn1{margin-left:450px; margin-bottom:5px;}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		//返回按钮
+		$(".btn1").off("click");
+		$(".btn1").on("click",function(){
+			$(".tab_content").load("model/teacher/teachers.html");
+		});	
+		//给form表单绑定事件并提交修改后的数据
+		$("form[name='addTeaForm']").off("submit");
+		$("form[name='addTeaForm']").on("submit",function(event){
+			var username = $("input[name='username']").val();
+			var workage = $("input[nmae='workage']").val();
+			var salary = $("input[name='salary']").val();
+			var lv = $("input[name='lv']").val();
+			var obj = {
+				username:username,
+				workage:workage,
+				salary:salary,
+				lv:lv	
+			};
+			var url = $("form[name='addTeaForm']").attr("action");;
+			$.ajax(url,{
+				dataType:"jsonp",
+				jsonp:"jsonp",
+				jsonpCallback:"foo",
+				data:obj	
+			});
+			//阻止表单提交
+			return false;
+		})
+	});
+	
+	function foo(){
+		$("form[name='addTeaForm']")[0].reset();
+		alert(data);	
+	}
+</script>
+<h2>教师信息修改系统</h2>
+    <button class="btn1">返回</button>
+    <form action="login.action" name="addTeaForm">
+        <table>
+          <tbody>
+            <tr>
+              <td>姓名:</td>
+              <td><input type="hidden" name="id">
+              	  <input type="text" name="username"/></td>
+            </tr>
+            <tr>
+              <td>工龄:</td>
+              <td>
+              	<input type="text" name="workage"/>
+              </td>
+            </tr>
+            <tr>
+              <td>薪资:</td>
+              <td>
+               <input type="text" name="salary"/>
+              </td>
+            </tr>
+            <tr>
+              <td>等级:</td>
+              <td><input type="text"/ name="lv"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="提交"/><input type="reset" value="重置"/></td>
+            </tr>
+          </tbody>
+        </table>
+    </form>
+

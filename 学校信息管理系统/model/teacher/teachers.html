@@ -1,0 +1,165 @@
+<!--教师管理-->
+<script type="text/javascript">
+	$(function(){
+		loadTeacherData();
+		//实现全选框功能
+		$(".opt_btns>:checkbox").off()
+		$(".opt_btns :checkbox").change(function(){
+			if($(this).prop("checked")){
+				$("#tea_tbl :checkbox").prop("checked",true);
+			}else{
+				$("#tea_tbl :checkbox").prop("checked",false);
+			}	
+		});
+		//实现其他按钮功能
+		$(".opt_btns button").off();
+		$(".opt_btns button").click(function(){
+			var opt = $(this).text();
+			switch(opt){
+				case "添加":
+					$(".tab_content").load("model/teacher/addTeacher.html");
+				break;
+				case "修改":
+					//将要修改的数据的id发往后台
+					var id = $("#tea_tbl :checkbox:checked").each(function(index, item) {
+                        return item.value;
+                    }).get(0);
+					if(id){
+					//主要分三步走,1.查询到要修改的数据,2.进入到修改页面上,3.初始化修改教师信息的页面
+						//1.向后台发送请求,查询教师的信息,并把获得的数据交给变量tea.
+						var tea;
+						$.ajax("model/teacher/teacher.json",{
+							async:false,
+							dataType:"json",
+							success: function(data){
+									tea = data;	
+							},
+							error:function(){
+								alert("获取数据失败!");}
+						});
+						console.log(tea);
+						//2.进入到修改页面上去
+						var url = "model/teacher/updTeacher.html?time="+new Date().getTime();
+						$(".tab_content").load(url,function(){
+							//3.初始化修改教师信息的页面(即将第一步查询到的数据插入到修改页面上去)
+							$("input[name='id']").val(tea.id);//(必须指定id,重要,否则不会出现数据)	
+							$("input[name='username']").val(tea.username);
+							$("input[name='workage']").val(tea.workage);
+							$("input[name='salary']").val(tea.salary);
+							$("input[name='lv']").val(tea.lv);
+						});	
+					}else{
+						alert("请选择要修改的教师!");	
+					}
+				break;
+				case "删除":
+					//删除应该是先将要删除的id发送到后台程序,有后台删除后前端再刷新
+					//1.获取要删除的id.
+					var ids = $("#tea_tbl :checkbox:checked").each(function(index, item) {
+                        return item.value;
+                    }).get().join();
+					//2.传到后台
+					$.ajax("sms/delTeachers",{
+						dataType:"jsonp",
+						jsonp:"jsonp",
+						data:{ids:ids},
+						jsonpCallback:"delHeadler"
+					});
+					//3.再刷新
+					//loadTeacherData();放在返回函数中
+				break;
+				case "刷新":
+					loadTeacherData();
+				break;	
+			}	
+		});
+	});
+	+-
+	
+	//为search按钮绑定事件
+	$("input[type='submit']").off("click");
+	$("input[type='submit']").on("click",function(){
+		var key = $(".selects select").val();
+		var val = $(".selects :text").val();
+		var obj = new Object();
+		obj[key] = val;//(重要)
+		loadTeacherData(obj);
+	});
+	
+	function loadTeacherData(data){
+		//请求教师数据
+		data = data || {};
+		$.ajax("model/teacher/teachers.js",{
+			dataType:"jsonp",
+			jsonp:"jsonp",
+			jsonpCallback:"loadData",
+			data:data	
+		});	
+		//每次加载数据后都把全选框中的勾取消掉
+		$(".opt_btns :checkbox").prop("checked",false);
+		$("#tea_tbl :checkbox").prop("checked",false);
+	}
+	
+	function loadData(data){
+			var hTr = $(".hiddenTr");
+			//清空tbody中的内容
+			$("tbody").children(":gt(0)").remove();
+			data.forEach(function(item){
+				var newTr = hTr.clone().removeClass("hiddenTr");
+				newTr.find(":checkbox").val(item.id);
+				newTr.children().eq(1).text(item.name);
+				newTr.children().eq(2).text(item.workage);
+				newTr.children().eq(3).text(item.salary);
+				newTr.children().eq(4).text(item.lv);
+				$("tbody").append(newTr);	
+			});
+	}
+	
+	function delHeadler(data){
+		alert(data);
+		loadTeacherData();	
+	}
+	
+	
+	
+</script>
+			<div class="inner current">
+				<div class="selects">
+					<select name="" id="">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<table id="tea_tbl">
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>姓名</th>
+							<th>工龄</th>
+							<th>薪资</th>
+							<th>等级</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="hiddenTr">
+							<td>
+				<input type="checkbox">
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+                    <button>刷新</button>
+				</div>
+			</div>

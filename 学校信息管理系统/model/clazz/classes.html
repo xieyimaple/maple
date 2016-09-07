@@ -1,0 +1,153 @@
+	<!--班级管理-->
+    <script type="text/javascript">
+    	$(function(){
+			loadClassData();
+			//全选按钮
+			$(".opt_btns :checkbox").change(function(){
+				if($(this).prop("checked")){
+					$(".cla_tal :checkbox").prop("checked",true);
+				}else{
+					$(".cla_tal :checkbox").prop("checked",false);
+				}	
+			});
+			//添加,删除,修改,刷新按钮
+			$(".opt_btns button").off();
+			$(".opt_btns button").click(function(){
+				var opt = $(this).text();
+				switch(opt){
+					case "添加":
+						$(".tab_content").load("model/clazz/addClass.html");
+					break;
+					case "修改":
+						var id = $(".cla_tal :checkbox:checked").each(function(index,item){
+							return item.value;	
+						}).get(0);
+						if(id){
+						//主要分三步走,1.查询到要修改的数据,2.进入到修改页面上,3.初始化修改教师信息的页面
+							//1.获取信息
+							var cla;
+							$.ajax("model/clazz/class.json",{
+								async:false,
+								dataType:"json",
+								success: function(data){
+									cla = data;	
+								}	
+							});
+							console.log(cla);
+							//2.进入到修改页面上
+							$(".tab_content").load("model/clazz/updclass.html",function(){
+								//3.初始化修改教师信息的页面
+								$("input[name='id']").val(cla.id);
+								$("input[name='classname']").val(cla.classname);
+								$("input[name='classnumber']").val(cla.classnumber);
+								$("input[name='classteacher']").val(cla.classteacher);
+								$("input[name='monitor']").val(cla.monitor);	
+							});//必须放在load中的函数中
+						
+							
+						}else{
+							alert("请选择你要修改的学生");	
+						}
+					break;
+					case "删除":
+						var ids = $(".cla_tal :checkbox:checked").each(function(index, item) {
+                            return item.value;
+                        }).get().join();
+						
+						$.ajax("model/clazz/classes.js",{
+							dataType:"jsonp",
+							jsonp:"jsonp",
+							jsonpCallback:"delHeadler",
+							data:{
+								ids:ids
+							}	
+						});
+						
+					break;
+					case "刷新":
+						loadClassData();
+					break;	
+				}
+			});
+		});
+		function delHeadler(data){
+			alert("删除成功!");
+			loadClassData();
+		}
+		//search按钮
+		$("input[type='submit']").off("click");
+		$("input[type='submit']").on("click",function(){
+			var key = $("select").val();
+			var val = $(":text").val();	
+			var obj = new Object();
+			obj[key] = val;
+			loadClassData(obj);
+		});
+		
+		function loadClassData(data){
+			data = data || {};
+			$.ajax("model/clazz/classes.js",{
+				dataType:"jsonp",
+				jsonp:"jsonp",
+				jsonpCallback:"classData",
+				data:data	
+			});
+			$(".opt_btns :checkbox").prop("checked",false);
+			$(".cla_tal :checkbox").prop("checked",false);
+		}
+
+		function classData(data){
+			var hTr = $(".hiddenTr");
+			
+			$("tbody").children(":gt(0)").remove();
+			data.forEach(function(item){
+				var newTr = hTr.clone().removeClass("hiddenTr");
+				newTr.find(":checkbox").val(item.id);
+				newTr.children().eq(1).text(item.classname);
+				newTr.children().eq(2).text(item.classnumber);
+				newTr.children().eq(3).text(item.classteacher);
+				newTr.children().eq(4).text(item.monitor);
+				$("tbody").append(newTr);	
+			});	
+		}
+    </script>
+			<div class="inner">
+				<div class="selects">
+					<select name="" id="">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<table class="cla_tal">
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>班级名称</th>
+							<th>班级人数</th>
+							<th>班主任</th>
+							<th>班长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="hiddenTr">
+							<td>
+								<input type="checkbox">
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+                    <button>刷新</button>
+				</div>
+			</div>
