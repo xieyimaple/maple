@@ -1,0 +1,56 @@
+		*{margin: 0;padding: 0; color:#000; font-family: "微软雅黑 宋体"; font-size: 14px;}
+		a{text-decoration: none;}
+		.content{text-align: center}
+		.tab_header{ width: 600px; margin:0 auto;border: 1px solid #ccc; }
+		ul{
+			height: 30px;
+		}
+		ul li{
+			list-style: none;
+			float: left;
+			line-height: 30px;
+			width:100px;
+			text-align: center;
+			border-right: 1px solid #ccc;
+			cursor: pointer;
+		}
+		li.current{
+			position: relative;
+			border-bottom:1px solid #FFF;
+			bottom: 0px;
+			background-color: #FFF;
+		}
+		.tab_content{
+			width: 600px;
+			border: 1px solid #ccc;
+			border-top:none;
+			margin: 0 auto;
+			height: 400px;
+			text-align: left;
+			
+		}
+		.inner{
+			padding: 10px 20px;
+			height: 100%;
+			position: relative;
+			display: none;
+		}
+		.inner.current{
+			display: block;
+		}
+
+		.inner table{
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.inner table td,.inner table th{
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+		.opt_btns{
+			position: absolute;
+			bottom: 30px
+		}
+		.selects{
+			margin: 5px 0;
+		}

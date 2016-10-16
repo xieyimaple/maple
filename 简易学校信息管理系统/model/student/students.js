@@ -1,0 +1,25 @@
+loadData([{
+	"id":1001,
+	"name":"张山",
+	"clazzName":"三年一班",
+	"gender":"男",
+	"grade":22
+},{
+	"id":1002,
+	"name":"王伟",
+	"clazzName":"三年一班",
+	"gender":"男",
+	"grade":22
+},{
+	"id":1003,
+	"name":"刘涛",
+	"clazzName":"三年一班",
+	"gender":"男",
+	"grade":22
+},{
+	"id":1004,
+	"name":"任青松",
+	"clazzName":"三年一班",
+	"gender":"男",
+	"grade":22
+}]);

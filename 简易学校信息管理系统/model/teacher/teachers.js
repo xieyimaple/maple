@@ -1,0 +1,32 @@
+// JavaScript Document
+loadData([{
+	"id":1001,
+	"name":"张三",
+	"workage":2,
+	"salary":3000,
+	"lv":"高级教师"
+},{
+	"id":1002,
+	"name":"西门庆",
+	"workage":4,
+	"salary":5000,
+	"lv":"中级教师"
+},{
+	"id":1003,
+	"name":"老潘",
+	"workage":3,
+	"salary":4000,
+	"lv":"中级教师"
+},{
+	"id":1004,
+	"name":"王五",
+	"workage":6,
+	"salary":7000,
+	"lv":"中级教师"
+},{
+	"id":1005,
+	"name":"李四",
+	"workage":5,
+	"salary":6000,
+	"lv":"高级教师"
+}]);

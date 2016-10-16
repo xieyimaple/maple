@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>学生信息管理系统</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-2.1.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+		$(".tab_header ul").on("click","li",function(){
+			if(!$(this).hasClass("current")){
+				$(this)
+					.addClass("current")
+					.siblings()
+					.removeClass("current");
+				var index = $(this).attr("val");
+				$(".inner")
+					.eq(index)
+					.addClass("current")
+					.siblings()
+					.removeClass("current");
+			}
+		});
+	});		
+
+	</script>
+
+</head>
+<body>
+	<div class="content">
+		<h1>学生信息管理系统</h1>
+		<div class="tab_header">
+			<ul>
+				<li val="0">
+					<a href="javascript:void(0);">			学生信息</a>
+				</li>
+				<li val="1" class="current">
+					<a href="javascript:void(0);">教师信息</a>
+				</li>
+				<li val="2">
+					<a href="javascript:void(0);">班级信息</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab_content">
+			<!--学生管理-->
+			<div class="inner">
+				<div class="selects">
+					<select name="" id="">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>姓名</th>
+							<th>班级</th>
+							<th>性别</th>
+							<th>分数</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+				<input type="checkbox">
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+				</div>
+			</div>
+			<!--教师管理-->
+			<div class="inner current">
+				<div class="selects">
+					<select name="" id="">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>姓名</th>
+							<th>工龄</th>
+							<th>薪资</th>
+							<th>等级</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+				<input type="checkbox">
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+				</div>
+			</div>
+			<!--班级管理-->
+			<div class="inner">
+				<div class="selects">
+					<select name="" id="">
+						<option value="name">姓名</option>
+						<option value="clazz">班级</option>
+						<option value="grade">成绩</option>
+					</select>
+					<input type="text">
+					<input type="submit" value="search">
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>选择</th>
+							<th>班级名称</th>
+							<th>班级人数</th>
+							<th>班主任</th>
+							<th>班长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+				<input type="checkbox">
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="opt_btns">
+					<input type="checkbox">
+					<button>添加</button>
+					<button>修改</button>
+					<button>删除</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

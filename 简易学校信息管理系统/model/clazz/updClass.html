@@ -1,0 +1,83 @@
+<!-- 修改班级信息 -->
+	<style type="text/css">
+    	h2{ text-align:center; padding-top:50px;}
+		table{ margin:0 auto; border:1px solid #333; border-collapse:collapse; width:400px;}
+		table td{ border:1px solid #333; text-align:center; height:30px;}
+		input{ height:30px;}
+		.btn1{margin-left:450px; margin-bottom:5px;}
+    </style>
+    <script type="text/javascript">
+    	$(function(){
+			//页面的初始化
+			init();
+			$("form[name='userForm']").submit(function(){
+				//获取数据并用ajax提交
+				var classname = $("input[name='classname']").val();
+				var classnumber = $("input[name='classnumber']").val();
+				var classteacher = $("input[name='classteacher']").val();
+				var monitor = $("input[name='monitor']").val();
+				var obj = {
+					classname:classname,
+					classnumber:classnumber,
+					classteacher:classteacher,
+					monitor:monitor	
+				};
+				
+				var url = $("form[name='userForm']").attr("action");
+				$.ajax(url,{
+					dataType:"jsonp",
+					jsonp:"jsonp",
+					jsonCallback:"classData",
+					data:obj
+				});
+				return false;	
+			});	
+		});
+		
+		function init(){
+			//先给返回按钮绑定事件
+			$("button").click(function(){
+				$(".tab_content").load("model/clazz/classes.html");	
+			});	
+		}
+
+		function classData(data){
+			$("form[name='userForm']")[0].reset();
+			alert(data);	
+		}
+    </script>
+
+	<h2>班级信息修改系统</h2>
+    <button class="btn1">返回</button>
+    <form action="login.action" name="userForm">
+        <table>
+          <tbody>
+            <tr>
+              <td>班级名称:</td>
+              <td>
+              	  <input type="hidden" name="id"/>
+              	  <input type="text" name="classname"/>
+              </td>
+            </tr>
+            <tr>
+              <td>班级人数:</td>
+              <td>
+              	<input type="text" name="classnumber"/>
+              </td>
+            </tr>
+            <tr>
+              <td>班主任:</td>
+              <td>
+               <input type="text" name="classteacher"/>
+              </td>
+            </tr>
+            <tr>
+              <td>班长:</td>
+              <td><input type="text"/ name="monitor"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="提交"/><input type="reset" value="重置"/></td>
+            </tr>
+          </tbody>
+        </table>
+    </form>
