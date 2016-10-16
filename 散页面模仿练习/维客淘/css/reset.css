@@ -1,0 +1,6 @@
+/* CSS Document */
+*{ font-size:14px; font-family:"微软雅黑","宋体"}
+body,ul,ol,dl,li,h1,h2,h3,table,td,dt,dd{ margin:0; padding:0;}
+h1,h2,h3{ font-weight:normal;}
+a{ text-decoration:none;}
+img{display:block; border:0px;}

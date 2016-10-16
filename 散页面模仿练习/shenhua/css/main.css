@@ -1,0 +1,312 @@
+/* CSS Document */
+/*头部*/
+.header{
+	
+}
+/* banner1 40px */
+.header .banner1{
+	overflow:hidden;	
+}
+.banner1 table{
+	width:560px;
+	margin:5px 90px 5px 0;
+	border-spacing:0px; /*消除边框之间的空白 解决多余4px问题*/
+	float:right;
+}
+.search{
+	border:1px solid #d8d8d8;
+	width:163px;
+}
+.search input{
+	width:120px;
+	height:28px;
+	border:0px;
+	float:left;
+}
+.search span{
+	width:30px;
+	height:28px;
+	float:right;
+	line-height:28px;
+	cursor:pointer;
+}
+
+.header .banner2{
+	overflow:hidden;  
+}
+.banner2 .logo{
+	width:185px;
+	height:55px;
+	float:left;
+	margin: 15px 0px 15px 90px;
+	background:url(../images/logo.png) no-repeat center;
+}
+.nav{
+	overflow:hidden;
+	margin:45px 60px 15px 0px;
+	float:right;
+}
+.nav li{
+	float:left;
+	height:25px;
+	line-height:25px;
+	margin-right:55px;
+}
+.nav a{
+	color:#000000;
+	font-size:16px;
+	font-weight:bolder;
+}
+
+
+/*广告*/
+.ad{
+	height:505px;
+	background:url(../images/ad.png) no-repeat center;
+	background-color:#000000;
+}
+/*标题*/
+.banner span{
+	display:block;
+	width:640px;
+	height:75px;
+	background:url(../images/index_text.png) no-repeat center;
+	margin:50px auto;
+}
+
+/*居中内容*/
+.content{
+	width:1170px;
+	margin:0 auto;
+	color:#666666;
+}
+
+.banner3{
+	
+}
+.banner3 ul{
+	overflow:hidden;
+}
+.banner3 ul li{
+	width:270px;
+	height:200px;
+	float:left;
+	background-color:#FFFFFF;
+}
+.banner3 ul .split{
+	width:30px;
+	background-color:#FFF;	
+}
+.banner3 h1{
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	height:20px;
+	line-height:20px;
+	margin:15px 0;
+	color:#000000;
+}
+.banner3 a{
+	color:#e10600;
+}
+
+.banner4 ul{
+	overflow:hidden;
+}
+.banner4 .left{
+	margin-right:30px;
+	float:left;
+	background-color:#FFFFFF;
+}
+.banner4 h1{
+	overflow:hidden;
+}
+.banner4 h1 span{
+	height:30px;
+	float:left;
+	line-height:30px;
+	color:#e10600;
+	font-size:24px;
+	margin:18px 0;
+}
+.banner4 h1 a{
+	height:30px;
+	float:right;
+	line-height:30px;
+	color:#e10600;
+	font-size:16px;
+	margin:18px 0;
+}
+.banner4 .tabs{
+	overflow:hidden;
+}
+.banner4 .tabs a{
+	float:left;
+	color:#666;
+	border-top:1px dashed #d8d8d8;
+	border-left:1px dashed #d8d8d8;
+	border-bottom:1px dashed #d8d8d8;
+	height:20px;
+	padding:16px 0px;
+	width:110px;
+	text-align:center;
+}
+.banner4 .tabs a.last{
+	border-right:1px dashed #d8d8d8;
+}
+
+.banner4 .news a{
+	float:left;
+	color:#666;
+	height:20px;
+	padding:16px 0px;
+	text-align:center;
+}
+.banner4 .news .newsc{
+	width:110px;
+	border-bottom:1px solid #d8d8d8;
+}
+.banner4 .news .newst{
+	width:648px;
+	border-bottom:1px dashed #d8d8d8;
+	text-align:left;
+	padding-left:20px;
+}
+
+.banner4 .right{
+	width:350px;
+	height:491px;
+	float:right;
+	position:relative
+}
+.banner4 .right img{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	border:0px;
+	display:block;
+}
+
+/*banner5*/
+.banner5 h1{
+	height:30px;
+	line-height:30px;
+	color:#e10600;
+	font-size:24px;
+	margin:40px 0 10px 0;
+}
+.banner5 p a{
+	color:#e10600;
+	padding:0 10px;
+}
+
+.banner5 ul{
+	overflow:hidden;
+	margin-top:20px;
+}
+.banner5 ul li{
+	float:left;
+	width:170px;
+	height:260px;
+}
+.banner5 ul li.split{
+	width:30px;
+}
+.banner5 ul li img{
+	border:0px;
+	display:block;
+}
+.banner5 ul li a{
+	color:#e10600;
+}
+
+
+/*底部*/
+.footer{
+	background-color:#333333;
+	color:#FFFFFF;
+}
+.footer ul.box2{
+	width:1170px;
+	overflow:hidden;
+	margin:0px auto;
+}
+
+.footer ul.box2>li{  
+	float:left;
+	width:375px;
+	
+}
+.footer ul.box2>li.left{
+	margin-right:22px;
+}
+.footer ul.box2>li.center{
+	margin-right:23px;
+}
+.footer h1{
+	font-size:18px;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+	padding:30px 0 5px 0;
+	margin-bottom:20px;
+	border-bottom:1px dashed #FFF;
+}
+.footer .logo{
+	width:120px;
+	height:35px;
+	float:left;
+	background:url(../images/footer_logo.png) no-repeat center;
+	margin:25px 55px;
+}
+.footer .wifi{
+	width:80px;
+	height:35px;
+	float:right;
+	margin:25px;
+	background:url(../images/icon_rss.png) no-repeat 0 10px;
+	padding-top:10px;
+	text-indent:20px;
+}
+
+.footer .center ul{
+	width:100%;
+	overflow:hidden;
+	margin-top:-15px;
+}
+.footer .center li{
+	width:175px;
+	height:30px;
+	float:left;
+	line-height:30px;
+	padding:10px 0;
+	border-bottom:1px dashed #FFF;
+}
+.footer .center li.split{
+	width:25px;
+	border:0px;
+}
+
+.footer ul.report li{
+	float:none;
+	list-style-image:url(../images/list_icon1.gif);
+	list-style-position:inside;
+	height:26px;
+	line-height:26px;
+}
+
+
+
+
+
+/*版权*/
+.copyright{
+	height:45px;
+	background-color:#666666;
+}
+
+
+
+
+
+

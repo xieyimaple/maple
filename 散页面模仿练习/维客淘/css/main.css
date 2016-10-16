@@ -1,0 +1,128 @@
+/* CSS Document */
+.header{ 
+	height:119px; 
+	background:url(../images/wkt_1_01.jpg) no-repeat center;
+	background-color:#f9f8ef;
+}
+
+
+.center{
+	width:950px;
+	margin:0 auto;
+	overflow:hidden;	
+}
+/*导航*/
+.nav{	
+	background-color:#82726b;
+}
+.nav li{
+	height:30px;
+	float:left;
+	list-style:none;
+	margin:0 15px;
+}
+.nav li a{
+	line-height:30px;
+	color:#eae1d6;
+}
+.nav li .new{
+	background-color:#bb0101;
+	color:#fff;	
+	width:16px;
+	height:16px;
+}
+/*搜索*/
+.search{
+	background-color:#e8e3db;
+}
+.search li{
+	height:30px;
+	float:left;
+	list-style:none;
+	margin:0 50px 0 15px;
+	line-height:30px;
+	color:#82726b;
+}
+.search li a{
+	color:#82726b;
+}
+.search .searchbox input{
+	height:20px;
+	float:left;
+	border:1px solid #82726b;
+	padding:0px;	
+	margin:4px 0px;
+}
+.search .searchbox span{
+	height:22px;
+	width:38px;
+	float:left;
+	background:#82726b;
+	margin:4px 0px;
+	color:#dfd9d2;
+	font-weight:bold;
+	line-height:22px;	/*文字垂直居中*/
+	text-align:center;	/*文字左右居中*/
+}
+/*广告*/
+.ad{
+	background-color:#f9f8ef;	
+}
+.ad img{
+	margin:0 auto;	
+}
+
+/*大容器*/
+.container{
+	background:url(../images/wkt_3_02.jpg) repeat-y center;	
+	background-color:#f9f8ef;	
+	height:5200px;
+}
+.content{ width:950px; height:5200px;}
+
+.con1{ width:950px; height:120px; margin-top:20px; overflow:hidden;}
+.con11{ width:230px; height:120px; float:left;}
+.con12{ width:10px; height:120px; float:left;}
+
+.con2{ width:950px; height:488px; background:url(../images/wkt_2_03.jpg) no-repeat center; overflow:hidden;}
+.con21{ width:480px; height:390px; margin:43px 30px; background:#000000; float:left; border:4px solid #d9d0c7;}
+.con22{ width:325px; height:398px; float:left; margin:43px 0px;}
+.con22 h1{ font-size:24px; font-weight:bolder;}
+
+.con3{ width:950px; height:716px; background:url(../images/wkt_2_07.jpg) no-repeat center;}
+.con31{ width:690px; height:334px; margin-left:15px; padding-top:16px; overflow:hidden;}
+.con31left{ width:338px; height:332px; float:left; border:1px solid #ac9485;}
+.top{ height:290px; width:326px; margin:5px 5px; background:url(../images/wkt_1_10.jpg) no-repeat center;}
+.under{ overflow:hidden;}
+.under .text1{ float:left; height:30px; line-height:30px; padding-left:12px;}
+.under .text2{ float:right; height:30px; line-height:30px; padding-right:12px;}
+.con31right{ width:338px; height:332px; margin-left:10px; float:left; border:1px solid #ac9485;}
+
+.con4{ width:950px; height:346px; background:url(../images/wkt_2_09.jpg) no-repeat center;}
+.con5{ width:950px; height:1041px; background:url(../images/images/A-%E7%BB%B4%E5%AE%A2%E6%B7%98-%E9%A6%96%E9%A1%B5_15.jpg) no-repeat center; overflow:hidden;}
+.con32{ width:690px; height:332px; margin-right:15px; padding-top:10px; float:right;}
+.con6{ width:950px; height:344px; background:url(../images/wkt_1_13.jpg) no-repeat center;}
+.con7{ width:950px; height:919px; background:url(../images/wkt_2_15.jpg) no-repeat center;} 
+.con71{ width:734px; height:286px; margin-left:15px; padding-top:13px;}
+.con71left{ width:237px; height:287px; margin-right:5px; float:left; border:1px solid #ac9485;}
+.top2{ background:url(../images/wkt_1_16.jpg) no-repeat center; width:223px; height:226px; padding:7px 7px;}
+.center2,.under2{ height:20px; line-height:20px; padding-left:12px;}
+
+.con8{ width:950px; height:344px; background:url(../images/wkt_1_20.jpg) no-repeat center;}
+
+.con9{ width:950px; height:348px; background:url(../images/wkt_2_18.png) no-repeat center;}
+.con91,.con92{ margin-left:100px;}
+.con91 .p1{ height:20px; line-height:20px; padding-top:30px; width:830px;}
+.con91 .p2{ height:30px; line-height:30px; width:830px;}
+.con91 .p3{ height:20px; line-height:20px; padding-top:40px; width:830px;}
+.con91 a{ color:#6a6667; padding-left:10px; padding-right:10px;}
+.con92 a{ color:#6a6667; background:url(../images/images/A-%E7%BB%B4%E5%AE%A2%E6%B7%98-%E9%A6%96%E9%A1%B5_18.png) no-repeat center; padding-left:80px;}
+.con92 .p4{ height:20px; line-height:20px; padding-top:20px;}
+.con92 .p5{ height:20px; line-height:20px; padding-top:3px;}
+.con92 .p6{ height:20px; line-height:20px; padding-top:5px;}
+
+.con10{ width:950px; height:342px; background:url(../images/wkt_1_24.png) no-repeat center;}
+.con1,.con2,.con3,.con4,.con5,.con6,.con7,.con8,.con9,.con10{ margin-bottom:10px;}
+
+
+

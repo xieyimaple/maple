@@ -1,0 +1,210 @@
+/* CSS Document */
+*{ font-family:"微软雅黑","宋体"; font-size:14px; color:#333333}
+ul, body {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+}
+li{
+	list-style: none;	
+}
+/*顶部*/
+.header {
+	background-color: #000000;
+	overflow: hidden;/*清除子级浮动*/
+}
+.header .logo {
+	width: 150px;
+	height: 55px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+.header .nav {
+	width: 450px;
+	float: left;
+}
+.header .nav ul li {
+	list-style: none;
+	float: left;
+	height: 55px;
+	line-height: 55px;
+	margin: 0 25px;
+}
+.header .nav ul li.shoes {
+	width: 40px;
+	margin-right: -20px;
+	background-repeat: no-repeat;
+	background-image: url(../images/ss.png);
+	background-position: center;
+}
+.header .nav ul li a {
+	color: #FFFFFF;
+}
+.header .search {
+	width:347px;
+	height: 39px;
+	background: url(../images/bg1.png)	 no-repeat center;
+	float: right;
+	margin:8px 0;
+}
+.search input {
+	height: 30px;
+	width:250px;
+	margin: 4px 0px 5px 25px;
+	border: 0px;
+	padding: 0px;
+	background-color: #e7e7e7;
+	float:left;
+}
+.search span{
+	width:30px;
+	height:30px;
+	margin: 4px 0px 5px 10px;
+	float:left;
+	background:url(../images/icon3.png) no-repeat center;
+	cursor:pointer;
+}
+
+.header .location {
+	width: 100px;
+	height: 55px;
+	float: right;
+	color: #FFFFFF;
+	line-height: 55px;
+}
+/*广告*/
+.ad {
+	height: 465px;
+	background: url(../images/ad.png) no-repeat center;
+	background-color: #ededed;
+}
+/*关注*/
+.focus {
+	background-color: #FFFFFF;
+}
+.focus div {/*居中容器*/
+	width: 280px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+.focus .words{
+	height: 50px;	
+	text-align: center;
+	line-height: 50px;
+	float:left;
+}
+.focus .weibo{
+	width:26px;
+	height:26px;
+	float:left;
+	margin:12px 0px 12px 30px;
+	background:url(../images/icon1.png) no-repeat 0 0;
+	cursor:pointer;
+}
+.focus .weixin{
+	width:26px;
+	height:26px;
+	float:left;
+	margin:12px 0px 12px 20px;
+	background:url(../images/icon1.png) no-repeat -42px 0;
+	cursor:pointer;
+}
+
+/*产品列表*/
+.products {
+	background-color: #ededed;
+	padding-bottom:30px;
+}
+.products div {/*居中容器*/
+	width: 1070px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.products div .product {
+	width: 520px;
+	height: 290px;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+.products div .right {
+	margin-right: 0px;
+}
+.products div .last {
+	width: 1070px;
+	height: 290px;
+	background: url(../images/p7.png) no-repeat center;
+	clear: both;/*清除浮动，用在布局最后一个元素*/
+}
+#p1 {
+	background: url(../images/p1.gif) no-repeat center;
+}
+#p2 {
+	background: url(../images/p2.gif) no-repeat center;
+}
+#p3 {
+	background: url(../images/p3.gif) no-repeat center;
+}
+#p4 {
+	background: url(../images/p4.gif) no-repeat center;
+}
+#p5 {
+	background: url(../images/p5.gif) no-repeat center;
+}
+#p6 {
+	background: url(../images/p6.gif) no-repeat center;
+}
+/*脚部信息*/
+.footer {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #545454;
+}
+.footer ul{
+	overflow:hidden;
+	width:810px;
+	margin:80px auto;
+}
+.footer li{
+	float:left;	
+}
+.footer .phone1{
+	width:170px;
+}
+.footer .buy{
+	width:175px;
+	margin-right:75px;
+	text-align:right;
+}
+.footer .phone2{
+	width:320px;
+}
+.phone2 img{
+	display:block;
+	border:none;
+}
+.footer .join{
+	width:70px;
+}
+.footer p{
+	margin:0px;
+	padding:3px 0;	
+}
+
+
+.copyright {
+	height: 48px;
+	background-color: #FFFFFF;
+}
+
+.copyright ul{
+	width:810px;
+	margin:0 auto;
+}
+.copyright li{
+	float:left;	
+	margin-right:50px;
+}
