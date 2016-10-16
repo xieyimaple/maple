@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="frameworks/jquery-2.1.4/jquery.min.js"></script>
+    <script src="frameworks/angular-1.4.0/angular.min.js"></script>
+    <script src="frameworks/angular-1.4.0/angular-route.min.js"></script>
+    <script>
+        angular.module("app",["ng"])
+                .controller("oneCtrl",function ($scope) {
+                    $scope.arr = [{
+                        id:"1",
+                        name:"简单"
+                    },{
+                        id:"2",
+                        name:"中等"
+                    }];
+                    $scope.level = 1;
+                    $scope.level2 = $scope.arr[0];
+                    $scope.level3 = "2";
+                    $scope.msg = "你好";
+                })
+                .directive("myTest",function () {
+                    return {
+                        scope:{
+                            data:'='
+                        },
+                        template:'<h1>data:{{data}}</h1>',
+                        link:function (scope,element) {
+                            console.log(scope);
+                            scope.$watch('data', function(newValue, oldValue) {
+                                alert(newValue);
+                            });
+
+                            element.on("click",function () {
+                                scope.data = "你好中国";
+                                scope.$digest();
+                                alert(1);
+                            });
+                            scope.data = "hello wrold";
+                            console.log(scope.data);
+                        }
+                    }
+                });
+
+
+    </script>
+</head>
+<body ng-controller="oneCtrl">
+    <my-test data="msg"></my-test>
+    <div my-test></div>
+    <div my-test></div>
+    <div my-test></div>
+
+    <select ng-model="level">
+        <option value="{{level.id}}" ng-repeat="level in arr">
+            {{level.name}}
+        </option>
+    </select>
+    level:{{level}}
+    <br>
+
+    <!--绑定数组中一个对象-->
+    <select ng-model="level2" ng-options="level.name for level in arr">
+
+    </select>
+    level2:{{level2}}
+    <br>
+    <!--绑定数组中一个对象的一个属性-->
+
+    <select ng-model="level3" ng-options="level.id as level.name for level in arr"></select>
+    level3:{{level3}}
+
+</body>
+</html>

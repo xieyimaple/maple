@@ -1,0 +1,180 @@
+{{model}}
+<div class="editingarea">
+    <div class="c_flex"><span class="c_flexible"></span></div>
+    <div class="Topictitle">添加题目</div>
+    <div class="c_editview">
+        <div class="Problem">
+            <div class="Attributetit">题目属性</div>
+            题目类型
+            <select ng-model="model.typeId"
+                    ng-options="type.id as type.realName for type in types"></select>
+            &nbsp;&nbsp;
+            难度级别
+            <select ng-model="model.levelId"
+                    ng-options="level.id as level.realName for level in levels"></select>
+            &nbsp;&nbsp;
+            所属方向
+            <select ng-model="model.departmentId"
+                    ng-options="d.id as d.name for d in departmentes"></select>
+            &nbsp;&nbsp;
+            所属知识点
+            <select ng-model="model.topicId"
+                    ng-options="t.id as t.title for t in topics | selectTopics : model.departmentId"></select>
+            &nbsp;&nbsp;
+        </div>
+        <div class="Problem">
+            <div class="Attributetit">题目题干</div>
+            <div class="Problemcontent">
+                <textarea
+                        ng-model="model.stem"
+                        cols="40" rows="4"></textarea>
+            </div>
+        </div>
+        <!--单选-->
+        <div class="Answeroptions" ng-show="model.typeId==1">
+            <div class="Attributetit">答案选项
+                <em>(通过选中每个选项左侧的单选按钮设定正确答案)</em>
+            </div>
+            <div class="c_condition"><span class="icon_add"><em class="icon_r" style="float: left">添加选项</em></span></div>
+            <div class="Answercontent">
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>A</p>
+                        <span><input select-option value="0" name="correct" type="radio" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[0]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>B</p>
+                        <span><input select-option value="1" name="correct" type="radio" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[1]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>C</p>
+                        <span><input select-option value="2" name="correct" type="radio" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[2]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>D</p>
+                        <span><input select-option value="3" name="correct" type="radio" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[3]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!--多选题-->
+        <div class="Answeroptions" ng-show="model.typeId==2">
+            <div class="Attributetit">答案选项
+                <em>(通过选中每个选项左侧的单选按钮设定正确答案)</em>
+            </div>
+            <div class="c_condition"><span class="icon_add"><em class="icon_r" style="float: left">添加选项</em></span></div>
+            <div class="Answercontent">
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>A</p>
+                        <span><input select-option value="0" name="correct" type="checkbox" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[0]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>B</p>
+                        <span><input select-option value="1" name="correct" type="checkbox" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[1]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>C</p>
+                        <span><input select-option value="2" name="correct" type="checkbox" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[2]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="Answerpart">
+                    <div class="Answerpart_left">
+                        <p>D</p>
+                        <span><input select-option value="3" name="correct" type="checkbox" /></span>
+                    </div>
+                    <div class="Answerpart_right">
+                        <textarea
+                                ng-model="model.choiceContent[3]"
+                                cols="40" rows="4"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!---->
+        <div class="Problem" ng-show="model.typeId==3">
+            <div class="Attributetit">答案</div>
+            <div class="Problemcontent">
+                <textarea
+                        ng-model="model.answer"
+                        cols="40" rows="4"></textarea>
+            </div>
+        </div>
+
+
+        <div class="Problem">
+            <div class="Attributetit">答案解析</div>
+            <div class="Problemcontent">
+                <textarea
+                        ng-model="model.analysis"
+                        cols="40" rows="4"></textarea>
+            </div>
+        </div>
+
+
+        <!--<div class="Problem">-->
+            <!--<div class="fistproblm"><span>1.</span><a href="#"></a></div>-->
+            <!--<div class="Problemcontent"></div>-->
+        <!--</div>-->
+        <div class="btn_left">
+            <span class="btnL"><em class="btnR" ng-click="add()">保存并继续</em></span>
+            <span class="btnL"><em class="btnR" ng-click="addAndClose()">保存并关闭</em></span>
+        </div>
+    </div>
+</div>
