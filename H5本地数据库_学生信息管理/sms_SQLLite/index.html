@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/db.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学生信息管理</h1>
+    </header>
+    <article>
+        <section>
+            <input type="search" id="search" placeholder="">
+            <label for="search">搜索</label>
+        </section>
+        <section>
+            <table class="tb1">
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>地址</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>22</td>
+                        <td>湖南</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <button>添加</button>
+            <button>修改</button>
+            <button>删除</button>
+        </section>
+    </article>
+</body>
+</html>

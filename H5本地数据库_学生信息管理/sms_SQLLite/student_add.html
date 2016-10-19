@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息添加</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/add.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学生信息添加</h1>
+    </header>
+    <article>
+        <section>
+            <form action="javascript:void(0)" id="addForm">
+            <table class="tb2">
+                <tbody>
+                    <tr>
+                        <td>学号</td>
+                        <td><input type="number" name="id"></td>
+                    </tr>
+                    <tr>
+                        <td>姓名</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>
+                            <select name="gender">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>年龄</td>
+                        <td><input type="number" name="age"></td>
+                    </tr>
+                    <tr>
+                        <td>地址</td>
+                        <td><input type="text" name="address"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="保存">
+                            <button><a href="student_list.html">返回</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+</body>
+</html>

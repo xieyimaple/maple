@@ -1,0 +1,13 @@
+/*基本样式表*/
+article{
+    font-family: "微软雅黑,宋体";
+    font-size:12px;
+}
+a{text-decoration: none;color:#000}
+.tb1{ width: 500px; border-collapse: collapse;margin: 10px 0}
+.tb1 td,.tb1 th{
+    border:1px solid #9da26a; text-align: center}
+
+.tb2{ width: 300px}
+.hi{
+    display:none;}

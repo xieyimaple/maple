@@ -1,0 +1,17 @@
+/*基本样式表*/
+a{
+    text-decoration: none;
+    color: #000;
+}
+.tb1{
+    width: 500px;
+    border-collapse: collapse;
+    margin: 10px;
+}
+.tb1 td,.tb1 th{
+    border: 1px solid black;
+    text-align: center;
+}
+.tb2{
+    width:300px;
+}
