@@ -1,0 +1,382 @@
+@charset "utf-8";
+/* CSS Document */
+#superBox {
+    height: 1900px;
+    width: 990px;
+    background-color: #F5F7F6;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*左边大标签*/
+#superBox .s_left {
+    width: 420px;
+    /*height: 1000px;*/
+    /*background-color: #00ff00;*/
+    float: left;
+}
+
+/*右边大标签*/
+#superBox .s_right {
+    width: 530px;
+    /*height: 1000px;*/
+    /*background-color: #990000;*/
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+    /*display: none;*/
+}
+
+/*两个标签上面部分*/
+#superBox .s_right .top {
+    height: 56px;
+    background-color: #95919A;
+}
+
+#superBox .s_right .top a {
+    margin-top: 6px;
+    display: inline-block;
+    width: 266px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #F4F6F6;
+    color: #95919A;
+    text-align: center;
+}
+
+/*右边大标签部分开始*/
+#superBox .s_right .left {
+    width: 256px;
+    /*height: 800px;*/
+    /*background-color: blue;*/
+    float: left;
+    margin-top: 30px;
+}
+
+#superBox .s_right .right {
+    width: 256px;
+    /*height: 800px;*/
+    /*background-color: green;*/
+    float: right;
+    margin-top: 30px;
+}
+
+/*右边下面小块儿部分*/
+#superBox .s_right .small1 {
+    height: 400px;
+    width: 256px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    color: #7B7777;
+    font-family: 微软雅黑;
+    font-size: 12px;
+}
+
+#superBox .s_right .small2 {
+    height: 425px;
+}
+
+#superBox .s_right .small1 p {
+    margin: 0px 42px 16px 32px;
+}
+
+#superBox .s_right .small1 .p1 {
+    margin-top: 26px;
+}
+
+#superBox .s_right .small1 .p1 a {
+    color: #FF784F;
+    font-size: 12px;
+}
+
+#superBox .s_right .small1 .p1 a:hover {
+    color: #333333;
+}
+
+#superBox .s_right .small1 .p2 a {
+    color: #333333;
+    font-size: 16px;
+}
+
+#superBox .s_right .small1 .p2 a:hover {
+    color: #FF784F;
+}
+
+#superBox .s_right .small1 .sp1 {
+    margin-left: 32px;
+}
+
+#superBox .s_right .small1 .sp2 {
+    margin-left: 60px;
+}
+
+/*span里面i的背景图*/
+#superBox .s_right .small1 .sp1 i {
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    list-style: none;
+    background: url("../img/jl.png") no-repeat -7px -4px;
+}
+
+#superBox .s_right .small1 .sp2 i {
+    display: inline-block;
+    width: 16px;
+    height: 9px;
+    list-style: none;
+    background: url("../img/jl.png") no-repeat -153px -6px;
+}
+
+/*左边大标签部分开始*/
+/*左边顶部*/
+#superBox .s_left .top {
+    height: 56px;
+    background-color: #95919A;
+}
+
+#superBox .s_left .top li.nv {
+    margin-top: 6px;
+    display: inline-block;
+    width: 210px;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#superBox .s_left .top li.current {
+    background-color: #F4F6F6;
+    color: #774093;
+}
+
+/*“我是拍客”里面的*/
+#superBox .s_left .myVideo {
+    margin-top: 30px;
+    background-color: #F5F7F6;
+    /*height: 1500px;*/
+    /*display: none;*/
+}
+
+/*“视频速递”里面的*/
+#superBox .s_left .video {
+    /*display: none;*/
+    margin-top: 30px;
+}
+
+/*轮播图外的大盒子*/
+#superBox .s_left .run {
+    height: 372px;
+    width: 420px;
+    /*background-color: green;*/
+    border-bottom: 1px solid #D3D3D3;
+    position: relative;
+    overflow: hidden;
+}
+
+#superBox .s_left .video .run {
+    height: 396px;
+    width: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*左边部分下面的小块儿*/
+#superBox .s_left .small {
+    height: 111px;
+    padding: 20px 0;
+    border-bottom: 1px solid #D3D3D3;
+    position: relative;
+}
+
+#superBox .s_left .small img.pic {
+    position: absolute;
+    left: 20px;
+    bottom: 38px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#superBox .s_left .small i {
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    list-style: none;
+    background: url("../img/jl.png") no-repeat -7px -4px;
+}
+
+#superBox .s_left .small span {
+    margin-left: 20px;
+    position: absolute;
+    top: 20px;
+    color: #828382;
+    font-size: 12px;
+}
+
+#superBox .s_left .small .p1 {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+
+#superBox .s_left .small .p1 a {
+    color: #333333;
+    font-family: 微软雅黑;
+    font-size: 15px;
+}
+
+#superBox .s_left .small .p1 a:hover {
+    color: #FF7800;
+}
+
+#superBox .s_left .small .p2 {
+    position: absolute;
+    left: 200px;
+    top: 75px;
+    font-size: 12px;
+    color: #828382;
+    font-family: 微软雅黑;
+}
+
+#superBox .s_left .video .small {
+    height: 125px;
+    padding: 25px 0;
+    border-bottom: 1px solid #D3D3D3;
+    position: relative;
+}
+
+#superBox .s_left .video .small span {
+    top: 25px;
+}
+
+#superBox .s_left .video .small .p1 {
+    left: 223px;
+    top: 50px;
+}
+
+#superBox .s_left .video .small .p2 {
+    left: 223px;
+    top: 108px;
+}
+
+#superBox .s_left .run ul {
+    width: 840px;
+}
+
+/*左右两个小三角部分*/
+#superBox .s_left .run span.sp1, #superBox .s_left .run span.sp2 {
+    display: inline-block;
+    position: absolute;
+    z-index: 1000;
+    font-size: 16px;
+    width: 38px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(55, 55, 55, 0.7);
+    top: 105px;
+    cursor: pointer;
+}
+
+#superBox .s_left .run span.sp2 {
+    right: 0px;
+}
+
+/*轮播图部分*/
+#superBox .s_left .run li {
+    width: 420px;
+    float: left;
+    position: absolute;
+    left: 420px;
+}
+
+#superBox .s_left .run li.current {
+    left: 0;
+}
+
+#superBox .s_left .run li img.pic {
+    position: absolute;
+    top: 93px;
+    left: 172px;
+}
+
+#superBox .s_left .run ul p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #828382;
+}
+
+#superBox .s_left .myVideo .run ul p {
+
+}
+
+#superBox .s_left .run ul .p3 a {
+    color: #333333;
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+
+#superBox .s_left .run ul .p3 a:hover {
+    color: #FF7800;
+}
+
+#superBox .s_left .run ul span.sp3 {
+    position: absolute;
+    bottom: -40px;
+    left: 0px;
+}
+
+#superBox .s_left .myVideo .run ul span.sp3 {
+    bottom: -26px;
+
+}
+
+#superBox .s_left .run ul span.sp3 i {
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    list-style: none;
+    background: url("../img/jl.png") no-repeat -7px -4px;
+}
+
+#superBox .s_left .run ul span.sp4 {
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+}
+
+#superBox .s_left .myVideo .run ul span.sp4 {
+
+    bottom: -26px;
+
+}
+
+#superBox .s_left .run ul span.sp4 i {
+    display: inline-block;
+    width: 16px;
+    height: 9px;
+    list-style: none;
+    background: url("../img/jl.png") no-repeat -153px -6px;
+}
+
+#lookMore {
+    margin: 30px auto;
+    width: 990px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #E2E2E2;
+    border-radius: 8px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+}
+
+#lookMore:hover {
+    background-color: #2F124A;
+    color: #ffffff;
+}

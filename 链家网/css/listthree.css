@@ -1,0 +1,24 @@
+
+.inpt{
+    border-bottom: 1px solid #dbdbdb;
+    padding:14px ;
+}
+.bder{
+    outline: none;
+    border: 0 none;
+}
+.box{
+    border: 1px solid #dbdbdb;
+    padding: 12px;
+}
+.rowtwo{
+    padding: 8px auto;
+    margin-top: 20px;
+}
+.rowfour{
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+.bg{
+    color: #39AC6A;
+}

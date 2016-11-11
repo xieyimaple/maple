@@ -1,0 +1,672 @@
+﻿@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, figure, figcaption, code, del, dfn, em, image, q, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, tf, tr, th {
+    border: 0px;
+    padding: 0px;
+    font-size: 100%;
+    margin: 0px;
+    font-family: inherit;
+    /*-webkit-font-smoothing: subpixel-antialiased;*/
+    font-weight: normal;
+}
+
+i, s, u {
+    font-style: normal;
+    text-decoration: none;
+}
+
+body {
+
+    color: #444;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+input, textarea, select {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    outline: none;
+}
+
+.content {
+    background: #fff;
+    min-width: 320px;
+}
+
+img {
+    border: 0px;
+    vertical-align: bottom;
+    -ms-interpolation-mode: bicubic;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: #4F608C;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5c307d;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0px;
+    visibility: hidden;
+}
+
+.yahei {
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+h1, h2, h3, h4 {
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.relative {
+    position: relative;
+}
+
+.clearfix {
+    *display: table;
+    *zoom: 1;
+}
+
+.clear {
+    clear: both;
+    overflow: hidden;
+    height: 0;
+}
+
+/*头部通栏*/
+.mainWrap {
+    width: 1000px;
+    margin: auto;
+    min-width: 320px;
+}
+
+.header {
+    background: #fff url(../images/bg.jpg) repeat-x top;
+}
+
+/*<!--横线-->*/
+.header .topLine {
+    border-top: 7px solid #5c307d;
+}
+
+/*通栏居中部分*/
+.header .topWrap {
+    height: 102px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+/*<!-- logo -->*/
+.header .logo {
+    float: left;
+    _display: inline;
+    margin-top: 20px;
+}
+
+/*<!-- 搜索盒子 -->*/
+.header .search {
+    float: right;
+    _display: inline;
+}
+
+/*<!-- English Version -->*/
+.header .search .ext {
+    padding: 16px 0 10px 0;
+    text-align: right;
+}
+
+.header .search .ext a {
+    color: #4d1379;
+    text-align: right;
+}
+
+/*搜索框*/
+.header .search .inp {
+    height: 18px;
+    width: 140px;
+    border: 1px solid #b1b1b1;
+    padding: 5px;
+    float: left;
+    display: inline-block;
+    border-right: 0;
+    -webkit-appearance: none
+}
+
+/*搜索背景 搜索图*/
+.header .search .thuicon-search span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url("../images/search.png");
+    margin-top: 6px;
+}
+
+.header .search .btn {
+    background: #5c307d;
+    height: 30px;
+    padding: 0 8px;
+    *padding: 0 8px 0 12px;
+    line-height: 29px;
+    text-align: center;
+    border: 0;
+    float: left;
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .search .btn:hover {
+    background: #22132d;
+}
+
+/*<!--导航栏部分-->*/
+#nav li {
+    /*background:#22132d;*/
+}
+
+#nav ul {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: #5c307d;
+    width: 165px;
+    /*opacity: 0.8;*/
+}
+
+#last {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: #5c307d;
+    width: 165px;
+    right: 237px;
+    /*opacity: 0.8;*/
+}
+
+#last li {
+    text-align: right;
+}
+
+.header .nav li a {
+    display: block;
+    line-height: 42px;
+    font-size: 15px;
+    color: #333;
+    padding: 0 14px;
+}
+
+/*设置小三角（使用特殊符号◇ 子绝父相）*/
+.nav .thuicon-angle-down {
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav .thuicon-angle-down s {
+    width: 12px;
+    display: inline-block;
+    position: absolute;
+    height: 12px;
+    top: -21px;
+}
+
+/*大图*/
+.banner {
+    height: 320px;
+    background-color: #F3F3F3;
+    margin-bottom: 44px;
+}
+
+.banner-pic {
+    height: 320px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*紫色方块*/
+.father {
+    position: relative;
+}
+
+.purple {
+    width: 400px;
+    height: 220px;
+    color: white;
+    background-color: rgba(109, 68, 137, 0.9);
+    border-bottom: 7px solid #FF9600;
+    position: absolute;
+    top: -250px;
+    right: 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.shizi {
+    font-size: 30px;
+}
+
+/*师资队伍*/
+.purple p {
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+/*4行*/
+.purple div {
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 22px;
+    width: 340px;
+    padding-top: 22px;
+    border-top: 2px solid #866195;
+}
+
+.banner a {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+}
+
+.banner a:hover {
+    focus: pointer;
+    color: #E8A674;
+}
+
+/*概况*/
+.biaoti {
+    font-size: 24px;
+    color: #5C307D;
+}
+
+/*概况内容*/
+.gkcontent {
+    width: 963px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #E1E1E1;
+    font-size: 14px;
+    line-height: 25px;
+    text-indent: 2em;
+}
+
+/*杰出人才*/
+.rencai, .gk, .father {
+    width: 963px;
+    margin: 0 auto;
+}
+
+/*人才内容*/
+.rccontent {
+    width: 963px;
+    margin-top: 25px;
+    margin-bottom: 43px;
+    padding-top: 25px;
+    border-top: 1px solid #E1E1E1;
+    font-size: 14px;
+    line-height: 25px;
+    text-indent: 2em;
+}
+
+/*九个盒子*/
+.nine {
+    height: 165px;
+    width: 241px;
+    margin-bottom: 29px;
+    background-color: #F6F6F6;
+    padding: 28px 30px;
+}
+
+.zbk {
+    border-top: 2px solid #5C307D;
+}
+
+.cbk {
+    border-top: 2px solid #E0823D;
+}
+
+/*内容*/
+.nine > div {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #777777;
+}
+
+/*师资队伍页面*/
+/*顶部图片*/
+.banner-teacher {
+    height: 1250px;
+}
+
+.banner-teacher-top {
+    background-color: #F3F3F3;
+    height: 150px;
+}
+
+.banner-teacher img {
+    margin: 0 auto;
+}
+
+/*内容部分*/
+.content-teacher {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*整个师资队伍*/
+.teacher-left {
+    border-left: 12px solid #5C307D;
+    width: 200px;
+    position: absolute;
+    top: -34px;
+}
+
+/*师资队伍左边标题*/
+.szdw {
+    width: 178px;
+    height: 68px;
+    background-color: #5C307D;
+    padding-left: 22px;
+    line-height: 68px;
+    font-size: 22px;
+    color: white;
+}
+
+/*师资队伍的内容*/
+.teacher-left ul {
+    padding-top: 20px;
+}
+
+.tihuan1, .tihuan2 ,.tihuan3{
+    display: none;
+    margin-left: 33px;
+    margin-top: -10px;
+}
+
+/*师资队伍列表*/
+.teacher-left li {
+    line-height: 22px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 15px;
+    color: #5C307D;
+    position: relative;
+    /*padding: 16px 0 16px 22px;*/
+}
+
+.teacher-left li a {
+    color: black;
+    display: block;
+    margin-right: 28px;
+    padding: 1em 0 1em 22px;
+    position: relative;
+    left: -4px;
+}
+
+/*用于添加的类名*/
+.teacher-current {
+    border-left: 4px solid #FF9600;
+}
+
+.teacher-current-a {
+    color: #5C307D;
+}
+
+/*师资队伍中间部分*/
+.teacher-right {
+    margin-left: 212px;
+}
+
+.lyys {
+    font-size: 28px;
+    margin: 0 0 18px 30px;
+    color: #5C307D;
+    padding: 0.4em 0 0.7em;
+    border-bottom: 1px solid #ddd;
+}
+
+/*师资队伍中间顶部链接*/
+.link-a {
+    height: 55px;
+    line-height: 55px;
+    margin-left: 30px;
+}
+
+.link-a a {
+    color: #999;
+}
+
+.link-a a:hover {
+    color: #5C307D;
+}
+
+.zhongjianwenzi {
+    width: 550px;
+    margin-left: 30px;
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/*中间列表部分*/
+.center-content {
+    width: 550px;
+    margin-left: 30px;
+    margin-top: 28px;
+}
+
+.center-content p {
+    font-size: 18px;
+    border-bottom: 2px solid #BBBBBB;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+}
+
+/*列表的设置*/
+.center-content ul li {
+    margin-left: 15px;
+    float: left;
+    width: 120px;
+    height: 33px;
+    list-style: disc;
+}
+
+/*第二个列表*/
+.xiangxia {
+    margin-top: 420px;
+}
+
+.center-content ul li a {
+    color: #4F608C;
+}
+
+.center-content ul li a:hover {
+    color: #5C307D;
+}
+
+/*师资队伍右半部分*/
+.teacher-right {
+    position: relative;
+
+}
+
+/*相关链接*/
+.teacher-link {
+    position: absolute;
+    top: 127px;
+    right: 0;
+    width: 190px;
+}
+
+.link-top {
+    height: 56px;
+    background-color: #F4F4F4;
+    padding-left: 11px;
+    padding-right: 7px;
+    line-height: 56px;
+    font-size: 16px;
+    color: #555555;
+}
+
+.teacher-link a:hover {
+    color: #5C307D;
+}
+
+.teacher-link ul {
+    padding-left: 11px;
+    padding-right: 7px;
+    padding-top: 18px;
+}
+
+.teacher-link li {
+    height: 28px;
+}
+
+.teacher-link ul a {
+    font-size: 12px;
+    color: #7E7E7D;
+}
+
+/*左边的两个盒子*/
+.lbox {
+    margin-right: 30px;
+}
+
+/*盒子里的标题*/
+.nine a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #22132D;
+}
+
+.nine a:hover {
+    color: #7360A6;
+}
+
+.footer .footerExtra {
+    width: 100%;
+    height: 105px;
+    padding: 40px 0;
+    background-color: #f8f7f4;
+}
+
+/*通栏中的居中显示内容*/
+.mainWrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*常用链接样式*/
+.footer .footerExtra h2 {
+    font-size: 18px;
+    color: #22132d;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    margin-right: 10%;
+    width: 432px;
+    height: 20px;
+}
+
+/*常用链接li  下的ul样式*/
+.footer .footerExtra li.commlink ul {
+    width: 480px;
+    height: 48px;
+}
+
+/*常用链接li  下的ul下的li*/
+.footer .footerExtra li.commlink li {
+    margin: 0;
+    width: 33.3%;
+    line-height: 24px;
+}
+
+/*存放常用连接 和右边三个图片*/
+.footer .footerExtra .link li {
+    float: left;
+    margin-right: 5px;
+}
+
+/*尾部中间部分*/
+.footer .footWrap {
+    background: #e0e0e0;
+    padding: 40px 0;
+}
+
+.footer .footWrap .footerNav {
+    height: 176px;
+}
+
+.footer .footWrap .footerNav li {
+    float: left;
+    width: 125px;
+    text-align: center;
+}
+
+.footer .footWrap h4 {
+    padding-bottom: 8px;
+}
+
+.footer .footWrap h4 a {
+    font-size: 15px;
+    color: #22132d;
+}
+
+.footer .footWrap a {
+    display: block;
+    line-height: 24px;
+    text-align: center;
+}
+
+/*最底部*/
+.footer .copyrights {
+    color: #a5a2a7;
+    padding: 20px 0;
+    line-height: 22px;
+    height: 83.2px;
+    background: #22132d;
+}
+
+.footer .copyrights .info {
+    float: left;
+}
+
+.footer .copyrights .info span {
+    padding-right: 24px;
+}
+
+.footer .copyrights .icp {
+    float: right;
+}
+
+.footer .copyrights .copy {
+    text-align: center;
+    color: #6f6a74;
+    display: block;
+}

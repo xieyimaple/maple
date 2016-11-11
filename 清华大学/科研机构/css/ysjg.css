@@ -1,0 +1,139 @@
+a{
+    color: black;
+    font-weight: 500;
+}
+.banxin{
+    height: 1000px;
+    width: 1020px;
+    margin: 0 auto;
+    position: relative;
+    /*overflow: hidden;*/
+}
+/*左侧列表部分*/
+.keyan{
+    color: white;
+    width: 180px;
+    height: 69px;
+    line-height: 69px;
+    display: inline-block;
+    font-size: 24px;
+    padding-left: 32px;
+}
+#llistkxyj{
+    width:214px;
+    background: #5C307D;
+    margin-top: -20px;
+}
+#llistkxyj #list{
+    width:202px;
+    margin-left: 12px;
+    border-top: 0 none;
+    border-bottom: 0 none;
+}
+#llistkxyj  li span{
+    display: inline-block;
+    width: 171px;
+    height: 52px;
+    line-height: 52px;
+    background: #ffffff;
+    padding-left:21px;
+    border: 1px solid #F0F0F0;
+}
+#llistkxyj  li span a{
+    color: #000000;
+}
+#list ul li{
+    width: 166px;
+    padding-left:28px;
+    display: none;
+    height: 20px;
+    line-height: 20px;
+    background-color: #F0F0F0;
+}
+#list ul li a{
+    color: black;
+    display: inline-block;
+    height: 14px;
+}
+/*中间文字部分*/
+.wenzi{
+    width: 770px;
+    position: absolute;
+    left:240px;
+    top:34px;
+}
+.wenzi a{
+    color: #999999;
+}
+.wenzi div p{
+    width:550px;
+    height: 50px;
+    line-height:2em;
+    margin-top: 12px;
+    text-indent: 2em;
+}
+.wenzi div p.current{
+    height: 98px;
+}
+.xiangmu{
+    font-weight: 700;
+    display: inline-block;
+    width:770px;
+    height: 50px;
+    border-bottom: 1px solid #E1E1E1;
+    font-size: 30px;
+    color: #78307D;
+    margin-top: 10px;
+}
+.tupian li{
+    float: left;
+    width: 245px;
+    color:#4F608C;
+    padding:24px 0 13px 0;
+    margin-left: 31px;
+}
+.gaikuang{
+    width: 245px;
+    padding-top: 20px;
+    font-size: 12px;
+    background: #F6F6F6;
+    text-indent: 0;
+}
+.gaikuang p a{
+    display: inline-block;
+    word-break: break-all;
+    width: 220px;
+    height: 40px;
+    line-height: 1.5em;
+}
+.gaikuang .part{
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.beijing{
+    background: #FFFFFF;
+}
+#right{
+    width: 190px;
+    height: 200px;
+    position: absolute;
+    top: 395px;
+    right: 179px;
+    cursor: pointer;
+}
+
+#right p {
+    width: 185px;
+    background-color: #F4F4F4;
+    padding: 20px 5px;
+}
+
+#right li {
+    height: 30px;
+    line-height: 30px;
+    color: #777777;
+    font-size: 14px;
+    margin-top: 5px;
+}

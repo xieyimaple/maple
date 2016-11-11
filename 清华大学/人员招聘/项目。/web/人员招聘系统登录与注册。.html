@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/注册与登录。.js"></script>
+    <link rel="stylesheet" href="../css/注册与登录。.css">
+</head>
+<body>
+<div class="g">
+    <!--<div id="mar">-->
+        <!--<marquee behavior="scroll" direction="">欢迎加入我们</marquee>-->
+    <!--</div>-->
+    <img src="../images/logo.png" alt="" id="xiaohui">
+    <img src="../images/招聘登录.png" id="renyuan">
+
+    <div class="renyuan">
+        <div class="zhaopin">
+            <div>
+                <input type="text" class="yonghuming" id="yhm"/>
+            </div>
+            <div>
+                <input type="password" name="" class="mima" id="mm"/>
+                <input type="text" value="密码错误！" id="pe">
+            </div>
+            <div>
+                <a href="#" id="r"><input type="button" value="登录" class="deng" id="deng"></a>
+                <a href="人员招聘系统注册界面。.html"><input type="button" value="注册" class="zhu" id="zhu"></a>
+            </div>
+        </div>
+    </div>
+    <div id="scroll"></div>
+</div>
+<script>
+    //获取页面元素。
+    var yhm = getId("yhm");
+    var mm = getId("mm");
+    var zhu = getId("zhu");
+    var deng = getId("deng");
+    var pe = getId("pe");
+    var zhu = getId("zhu");
+    var r = getId("r");
+    var scroll = getId("scroll");
+    //判断用户是否输入正确的用户名和密码。
+    yhm.onblur = function () {
+        if (yhm.value != "admin") {
+            yhm.value = "用户名错误！";
+            mm.disabled = true;
+            yhm.onclick = function () {
+                yhm.value = "";
+            }
+        }
+        if (yhm.value === "admin") {
+            mm.disabled = false;
+        }
+    };
+    mm.onblur = function () {
+        if (mm.value != 371371) {
+            deng.onclick = function () {
+                pe.style.display = "block";
+                pe.disabled = true;
+            };
+        } else {
+            deng.onclick = function () {
+                r.href = "人员招聘系统登录界面.html";
+            };
+        }
+    };
+    mm.onfocus = function () {
+        mm.value = "";
+        pe.style.display = "none";
+    };
+    //给scroll添加鼠标移入，移出事件。
+    scroll.onmouseover = function () {
+
+    };
+    scroll.onmouseout = function () {
+
+    };
+
+
+</script>
+</body>
+</html>

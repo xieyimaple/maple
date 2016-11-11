@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*轮播图*/
+.all {
+    width: 1200px;
+    height: 400px;
+    padding: 7px;
+    /*border: 1px solid #ccc;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+.screen {
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen li {
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+}
+
+.screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 7200px;
+}
+
+.all ol {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.all ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.all ol li.current {
+    background: yellow;
+}
+
+#arr {
+    display: none;
+}
+
+#arr span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -20px;
+    background: #000;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#arr #right {
+    right: 5px;
+    left: auto;
+}
+
+/*焦点focus*/
+.focus{
+    width: 1000px;
+    height: 946px;
+    margin: 0 auto;
+}
+.focus h2{
+    font-size: 20px;
+    line-height: 70px;
+    color: #22132d;
+    text-indent: 22px;
+    /*zoom: 1;*/
+}
+.focus .focusList{
+    width: 990px;
+    margin: 0 5px;
+    height: 876px;
+}
+.focus .focusList li{
+    float: left;
+    width: 300px;
+    margin: 0 15px 10px 15px;
+    border-top: 2px solid #5c307d;
+    height: 280px;
+    overflow: hidden;
+}
+.focus .focusList h3 {
+    margin-top: 1.4em;
+}
+
+.focus .focusList h3 a {
+    color: #22132D;
+    line-height: 22px;
+    font-size: 16px;
+}
+.focus .focusList p {
+    color: #777;
+    padding-top: 8px;
+}

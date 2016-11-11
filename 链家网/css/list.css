@@ -1,0 +1,86 @@
+.row-one{
+    background: #3e68b8;
+}
+.row-one>.option{
+    background: #2553a8;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 8px 22px;
+}
+.text-one{
+    margin-top: 12px;
+    color: #8aa2d4;
+}
+.row-two{
+    width: 100%;
+    margin-top: -14px ;
+}
+.row-two>.option-left>img{
+    display: inline-block;
+    margin-left: -12px;
+
+}
+.row-two>.option-right>img{
+    display: inline-block;
+    margin-right: -60px;
+}
+.row-three{
+    border-bottom: 1px solid #dbdbdb;
+}
+.row-three .col-top>ul{
+   margin-top: 20px;
+}
+.row-four{
+    margin: 10px 8px;
+}
+.row-five{
+    margin-top: 20px;
+    border-top: 1px solid #dbdbdb;
+}
+.row-five ul{
+    margin: 16px 18px;
+}
+.turn-cross{
+    background: #f5f5f5;
+}
+.row-list{
+    margin: 16px 10px;
+}
+.row-six{
+    border: 1px solid #dbdbdb;
+}
+.row-six .colred{
+    border: 1px solid red;
+}
+.row-seven{
+    margin: 14px;
+}
+.row-seven .box{
+    border: 1px solid #dbdbdb;
+    padding: 10px 20px;
+}
+.bg{
+    background: #dbdbdb;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px;
+    padding-left: 16px;
+}
+.row-eight{
+    margin-top: 16px;
+}
+.row-eight span{
+    border: 2px solid #dbdbdb;
+}
+.row-nine{
+    margin:26px 0;
+}
+.bg-top{
+    border: 10px solid #dbdbdb;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.more{
+    text-align: center;
+    margin: 10px auto;
+}

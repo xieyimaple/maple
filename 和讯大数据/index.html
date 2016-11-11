@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>和讯大数据</title>
+    <link rel="stylesheet" href="frameworks/bootstrap-3.3.0-dist/css/bootstrap.min.css">
+    <script src="frameworks/jquery-2.1.4/jquery.min.js"></script>
+    <script src="frameworks/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+
+    <!--自定义-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--头部-->
+        <div class="header">
+            <!--导航-->
+            <div class="row-one row">
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <!--极小屏下隐藏-->
+                <div class="col-sm-6 hidden-xs tabs-header">
+                    <div class="row">
+                        <div class="col-sm-4">全体画像</div>
+                        <div class="col-sm-4 active">群体画像</div>
+                        <div class="col-sm-4">个体画像</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 btns">
+                    <a class="btn btn-danger btn-xs pull-right">注册</a>
+                    <a class="btn btn-danger btn-xs pull-right">登陆</a>
+                </div>
+            </div>
+            <!--横线-->
+            <div class="row-two row">
+                <div class="col-sm-3 col-xs-6"></div>
+                <div class="col-sm-6 hidden-xs tabs-line">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4 active"></div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6"></div>
+            </div>
+            <!--选项卡内容 - 极小屏下隐藏-->
+            <div class="row-three tabs-content hidden-xs">
+                群体画像是对一群人的数据的描述。。。。
+            </div>
+            <!--选项卡内容 - 极小屏下显示-->
+            <div class="row-four visible-xs">
+                <ul class="nav nav-tabs">
+                    <li><a href="#all" data-toggle="tab">全体画像</a></li>
+                    <li class="active"><a href="#group" data-toggle="tab">群体画像</a></li>
+                    <li><a href="#personal" data-toggle="tab">个体画像</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="all" class="tab-pane">
+                        全体画像是对全部人的数据的描述。。。。
+                    </div>
+                    <div id="group" class="tab-pane active">
+                        群体画像是对一群人的数据的描述。。。。
+                    </div>
+                    <div id="personal" class="tab-pane">
+                        个体画像是对一个人的数据的描述。。。。
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--头部结束-->
+
+        <!--搜索区域 极小屏下显示-->
+        <div class="search-phone visible-xs " >
+            <ul class="row tabs-header list-unstyled dropdown">
+                <li class="col-xs-3" data-toggle="dropdown">
+                    <a href="#" >
+                        访客信息
+                        <span class="caret"></span>
+                    </a>
+                </li>
+                <li class="col-xs-3"  data-toggle="dropdown">
+                    <a href="#">
+                        忠诚度
+                        <span class="caret"></span>
+                    </a>
+                </li>
+                <li class="col-xs-3"  data-toggle="dropdown">
+                    <a href="#">
+                        访问偏好
+                        <span class="caret"></span>
+                    </a>
+                </li>
+                <li class="col-xs-3"  data-toggle="dropdown">
+                    <a href="#">
+                        其他
+                        <span class="caret"></span>
+                    </a>
+                </li>
+
+                <!--下拉菜单-->
+                <ul class="dropdown-menu" id="one-menu">
+                    <li><a href="">one</a></li>
+                    <li><a href="">two</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">three</a></li>
+                </ul>
+            </ul>
+
+
+
+        </div>
+
+        <!--搜索区域 华西村 匠心精神 极小屏下隐藏-->
+        <div class="search hidden-xs">
+            <!--第一行-->
+            <div class="labels">
+                <strong>标签搜索：</strong>
+                <span class="label label-danger">
+                    注册用户
+                    <i class="glyphicon glyphicon-remove"></i>
+                </span>
+                <span class="label label-danger">
+                    股票
+                    <i class="glyphicon glyphicon-remove"></i>
+                </span>
+                <span class="label label-danger">
+                    3c产品
+                    <i class="glyphicon glyphicon-remove"></i>
+                </span>
+            </div>
+            <!--第二行-->
+            <div class="row-two"></div>
+            <!--第三行-->
+            <div class="row-three">
+                <ul class="list-inline">
+                    <li>
+                       <strong>访问频次：</strong>
+                    </li>
+                    <li class="active"><a href="#">全部</a></li>
+                    <li><a href="#">高频</a></li>
+                    <li><a href="#">中频</a></li>
+                    <li><a href="#">低频</a></li>
+                    <li class="pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>多选</a>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        <strong>访客生命周期：</strong>
+                    </li>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">考察期</a></li>
+                    <li class="active"><a href="#">形成期</a></li>
+                    <li><a href="#">成熟期</a></li>
+                    <li><a href="#">衰退期</a></li>
+                    <li class="pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>多选</a>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        <strong>交易生命周期：</strong>
+                    </li>
+                    <li><a href="#">全部</a></li>
+                    <li class="active"><a href="#">考察期</a></li>
+                    <li><a href="#">形成期</a></li>
+                    <li><a href="#">成熟期</a></li>
+                    <li><a href="#">衰退期</a></li>
+                    <li class="pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>多选</a>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        <strong>个人长期关注：</strong>
+                    </li>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">投资</a></li>
+                    <li><a href="#">理财</a></li>
+                    <li><a href="#">股票</a></li>
+                    <li class="active"><a href="#">基金</a></li>
+                    <li class="pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>多选</a>
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        <strong>个人购买倾向：</strong>
+                    </li>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">3c产品</a></li>
+                    <li class="active"><a href="#">服装</a></li>
+                    <li><a href="#">家电</a></li>
+                    <li class="pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-plus"></span>多选</a>
+                    </li>
+                </ul>
+            </div>
+            <!--第四行-->
+            <div class="row-four">
+                <ul class="list-inline">
+                    <li><a href="">今天</a></li>
+                    <li class="active"><a href="">最近3天</a></li>
+                    <li><a href="">最近7天</a></li>
+                    <li><a href="">自选时间段</a></li>
+                </ul>
+            </div>
+            <!--第五行-->
+            <div class="row-five">
+                尊敬的张三用户。。。
+            </div>
+        </div>
+        <!--搜索区域结束-->
+        <!--表格-->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr class="bg-warning">
+                    <td>全选</td>
+                    <td>用户id</td>
+                    <td>性别</td>
+                    <td>注册类型</td>
+                    <td>年龄</td>
+                    <td>访问时长</td>
+                    <td>访问页面</td>
+                    <td>访问次数</td>
+                    <td>标签</td>
+                    <td>更多详情</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">1
+                    </td>
+                    <td>10210102</td>
+                    <td>女</td>
+                    <td>注册</td>
+                    <td>67</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>小股民</td>
+                    <td>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--表格结束-->
+
+        <!--footer-->
+        <div class="footer">
+            和讯网  大数据部 ｜Email: xxx@hexun.com
+        </div>
+    </div>
+
+</body>
+</html>

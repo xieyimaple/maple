@@ -1,0 +1,72 @@
+/*首页样式*/
+a,:hover{
+ color: #12211e;
+}
+/*头部*/
+.header{
+    height: 254px;
+    background: url("../image/liajia.png") no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+}
+.header>.row-one{
+    margin: 12px -15px;
+}
+.header>.row-one  .label{
+    background: #3d3d3d;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.header>.row-one .options{
+    text-align: center;
+}
+.header>.row-one .options>ul{
+    margin-left: 10px;
+}
+.header .row-two h3, h1{
+    text-align: center;
+}
+.buys{
+    margin: 0;
+    height: 120px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.buys ul{
+    width: 51px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+.buys ul li:last-child{
+    margin-top: 8px;
+}
+.carousels{
+    padding: 14px 0 10px;
+    background: #f4f4f4;
+}
+.carousels .item>img{
+    width: 100%;
+}
+.hot-rooms > .hot-header{
+    height: 48px;
+    line-height: 48px;
+    padding-left: 15px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.hot-rooms > .hot-list > .media{
+    padding: 14px 11px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.hot-rooms > .hot-list .media-heading{
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+.hot-rooms > .hot-list .media-body > p{
+    margin: 0;
+    font-size: 12px;
+}
+.hot-rooms > .hot-list .media-body .label{
+    display: inline-block;
+    margin-top: 4px;
+}

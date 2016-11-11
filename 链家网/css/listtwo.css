@@ -1,0 +1,65 @@
+.row-one{
+    background: #3e68b8;
+}
+.row-one>.option{
+    background: #2553a8;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 8px 22px;
+}
+.text-one{
+    margin-top: 12px;
+    color: #8aa2d4;
+}
+.row-two{
+    margin: 12px auto;
+    font-weight: bold;
+}
+.money{
+    background: #f5f5f5;
+    margin-left: -16px;
+    margin-right: -20px;
+    padding: 10px;
+}
+.media .media-body .label1{
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 8px 22px;
+    display: inline-block;
+}
+
+
+
+.row-six{
+    /*background: #fbfbfb;*/
+    border-radius: 26px;
+    border: 1px solid #dbdbdb;
+    padding: 14px;
+    margin: 14px 22px;
+}
+.row-six .label{
+    background: #000000;
+}
+.moneycar{
+    background: #f5f5f5;
+    margin-left: -16px;
+    margin-right: -20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.footer{
+    height: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+.foot{
+    height: 18px;
+    text-align: center;
+    margin-bottom: 78px;
+}
+.row-seven{
+    margin: 18px 34px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #dbdbdb;
+}

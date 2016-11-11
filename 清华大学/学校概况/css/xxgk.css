@@ -1,0 +1,124 @@
+@charset "UIF-8";
+body, div, p, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "宋体";
+    font-size: 12px;
+}
+
+input, img {
+    border: 0 none;
+    outline-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: " ";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.box{
+    margin: 0 auto;
+}
+
+
+.dtsdw{
+    width: 400px;
+    height: 250px;
+    background-color: rgba(48,0,64,0.6);
+    position: absolute;
+    right: 100px;
+    bottom: -6px;
+    border-bottom: 6px solid #FF9600;
+}
+.hengxian{
+    width: 360px;
+    margin: 0 auto;
+    border-bottom: 1px solid #8A6F9D;
+    margin-top: 20px;
+}
+.dtsdw .xyz{
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 33px;
+    font-family: 微软雅黑;
+}
+.dtsdw p{
+    font-size: 14px;
+    height: 13px;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 微软雅黑;
+}
+.dtsdw h1{
+    margin-top: 13px;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.xiaobiaoti{
+    margin: 0 auto;
+    width: 960px;
+    height: 95px;
+    border-bottom: 1px solid #DDDDDD;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.xiaobiaoti p{
+    color: #5C307D;
+    font-size: 24px;
+    font-family: 微软雅黑;
+    margin-top: 45px;
+}
+.xiaotupian{
+    display: inline-block;
+    width: 301px;
+    height: 276px;
+    background-color: #F6F6F6;
+    margin: 15px 16px;
+    float: left;
+}
+.xiaotupianhezi{
+    width: 1000px;
+    margin: 0 auto;
+    /*background-color: pink;*/
+}
+.xiaotu-one img{
+    width: 301px;
+    height: 160px;
+}
+
+.xiaotupian .xiaotu-wenzi h2{
+     margin-top: 27px;
+     font-size: 16px;
+     margin-left: 30px;
+    color: #22132D;
+ }
+.xiaotupian .xiaotu-wenzi a{
+     display: block;
+     margin-top: 10px;
+     margin-right: 15px;
+     line-height: 20px;
+     margin-left: 30px;
+     color: #777777;
+ }
+.xiaotupian .xiaotu-wenzi a:hover{
+    color: #5E69AD;
+    text-decoration: underline;
+}

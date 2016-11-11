@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/注册与登录。.css">
+    <script src="../js/注册与登录。.js"></script>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+<img src="../images/用户注册 (2).png" alt="" height="600px" width="100%" id="zhucetupian">
+<div class="zhuce" id="zhuc">
+    <div><input type="text" id="i1" value="请输入用户名" class="inp1"><span></span></div>
+    <div><input type="text" id="i2" value="密码" class="inp2"><span></span></div>
+    <div><input type="text" id="i3" value="确认密码" class="inp3"><span></span></div>
+    <div><input type="text" id="i4" value="注册邮箱" class="inp4"><span></span></div>
+    <a href="#"><input type="button" value="注册" class="but" id="b"></a>
+</div>
+<div class="tan" id="tanchu">注册失败！</div>
+<div class="box1" id="screen">
+    <ul>
+        <li><img src="../images/4.jpg" alt=""/></li>
+        <li><img src="../images/3 (2).jpg" alt=""/></li>
+        <li><img src="../images/bigimg_7.jpg" alt="" height="220px"/></li>
+        <li><img src="../images/轮4.jpg" alt="" height="220px"/></li>
+    </ul>
+</div>
+<script>
+    //获取页面元素
+    var screen = getId("screen");
+    //获取宽度
+    var imgW = screen.offsetWidth;
+    var timer = null;
+    var ul = screen.children[0];
+    var lis = ul.children;
+    //设置定时器
+    timer = setInterval(function () {
+        var leader = ul.offsetLeft;
+        var step = -20;
+        if (leader > -(lis.length - 1) * imgW) {
+            leader = leader + step;
+            ul.style.left = leader + "px";
+        } else {
+            ul.style.left = step + "px";
+        }
+    }, 100);
+
+    //mi ma yan zheng .
+    var ipt1 = document.getElementById("i1");
+    var ipt2 = document.getElementById("i2");
+    var ipt3 = document.getElementById("i3");
+    var ipt4 = document.getElementById("i4");
+    var tanchu = document.getElementById("tanchu");
+    var zhuc = document.getElementById("zhuc");
+    var b = document.getElementById("b");
+//    yanzheng(ipt1, /^[\u4e00-\u9fa5]{2,5}$/);
+//    yanzheng(ipt2, /^\d$/);
+//    yanzheng(ipt3, /^\d$/);
+//    yanzheng(ipt4, /^\w+@\w+\.\w{2,3}$/);
+    ipt1.onfocus= function () {
+        this.value="";
+        tanchu.style.display="none";
+    };
+    ipt2.onfocus= function () {
+        this.value="";
+        tanchu.style.display="none";
+    };
+    ipt3.onfocus= function () {
+        this.value="";
+        tanchu.style.display="none";
+    };
+    ipt4.onfocus= function () {
+        this.value="";
+        tanchu.style.display="none";
+    };
+    b.onclick= function () {
+        if(ipt1.value==""|ipt2.value==""|ipt3.value==""|ipt4.value==""){
+            tanchu.style.display="block";
+        }else{
+            this.parentNode.href="人员招聘系统登录与注册。.html";
+        }
+    };
+
+
+</script>
+</body>
+</html>

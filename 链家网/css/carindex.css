@@ -1,0 +1,58 @@
+.row-one{
+    margin: 10px;
+}
+.tab{
+    background: #3e68b8;
+    color: #c1cfe9;
+    font-weight: bold;
+}
+.label{
+    border-radius: 10px;
+    margin-top: -10px;
+}
+.row-two{
+    font-weight: bold;
+}
+.row-thr{
+    margin-top: 22px;
+}
+.row-thr li{
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.row-thr ul.pull-one{
+    margin-left: -18px;
+}
+.row-thr ul.pull-last{
+    margin-right: -26px;
+}
+.row-four{
+    margin: 16px;
+    font-weight: bold;
+}
+.row-five{
+    border: 10px solid #f5f5f5;
+}
+.carousels .item>img{
+    width: 100%;
+}
+.row-six{
+    margin: 16px 0;
+}
+.row-six>.hand{
+    font-weight: bold;
+}
+.footer{
+    height: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+.foot{
+    height: 18px;
+    text-align: center;
+    margin-bottom: 78px;
+}
+.money{
+    color: #fc0f4c;
+}
